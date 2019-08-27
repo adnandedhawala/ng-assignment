@@ -1,0 +1,20 @@
+{
+  "user": [
+    {
+      "userFirstName": "Adnan",
+      "userLastName": "Dedhawala",
+      "userEmail": "admin@gmail.com",
+      "userMobile": "8169988039",
+      "userPassword": "admin",
+      "id": 1
+    },
+    {
+      "userFirstName": "Ali",
+      "userLastName": "Tajir",
+      "userEmail": "ali@gmail.com",
+      "userMobile": "8169988039",
+      "userPassword": "admin",
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.content-wrapper{
+    width: 100%;
+    /* display: flex; */
+
+}
+.left-sidebar{
+    display: inline-block;
+    width: 25%;
+}
+.right-sidebar{
+    width: 70%;
+    display:inline-block;
+}
+.error_span span{
+    color: red;
+}

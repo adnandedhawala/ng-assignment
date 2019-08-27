@@ -1,0 +1,43 @@
+<div class="card card-login mx-auto mt-5">
+  <div class="card-header" style="text-align: center;">Login</div>
+  <div class="card-body">
+    <form [formGroup]='loginForm' (ngSubmit)="LoginData(loginForm)">
+
+      <div class="form-group">
+        <div class="form-label-group">
+          <input type="email" id="inputEmail" formControlName="userEmail" class="form-control"
+            placeholder="Email address" required="required">
+          <label for="inputEmail">Email address</label>
+        </div>
+        <div class="error_span"
+          *ngIf="loginForm.controls['userEmail'].touched && !loginForm.controls['userEmail'].valid">
+          <span *ngIf="loginForm.controls['userEmail'].hasError('required') ">Email is required</span>
+          <span *ngIf="loginForm.controls['userEmail'].hasError('email') ">Invalid Email</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-label-group">
+          <input type="password" id="inputPassword" formControlName="userPassword" class="form-control"
+            placeholder="Password" required="required">
+          <label for="inputPassword">Password</label>
+          <div class="error_span"
+            *ngIf="loginForm.controls['userPassword'].touched && !loginForm.controls['userPassword'].valid">
+            <span *ngIf="loginForm.controls['userPassword'].hasError('required') ">Password is required</span>
+            <span *ngIf="loginForm.controls['userPassword'].hasError('minlength') ">Password too Short</span>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me">
+            Remember Password
+          </label>
+        </div>
+      </div> -->
+      <button type="submit" class="btn btn-primary btn-block" [disabled]='!loginForm.valid'>Login</button>
+      <div>{{msg}}</div>
+    </form>
+  </div>
+</div>
